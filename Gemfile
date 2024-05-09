@@ -2,11 +2,9 @@
 
 source 'https://rubygems.org'
 
-group :development, :test do
-end
-
-group :test do
-end
-
-group :production do
+group :development do
+  gem 'byebug'
+  gem 'dotenv'
+  gem 'rspec'
+  gem 'rubocop'
 end
