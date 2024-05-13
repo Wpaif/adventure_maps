@@ -2,9 +2,12 @@
 
 source 'https://rubygems.org'
 
+gem 'dotenv'
+gem 'nokogiri'
+
 group :development do
   gem 'byebug'
-  gem 'dotenv'
   gem 'rspec'
   gem 'rubocop'
+  gem 'rubocop-rspec'
 end
