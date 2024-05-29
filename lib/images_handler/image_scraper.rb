@@ -17,10 +17,12 @@ class ImageScraper
 
     response = Net::HTTP.get_response(uri)
 
-    return [] unless response.is_a?(Net::HTTPSuccess)
+    [] unless response.is_a?(Net::HTTPSuccess)
 
-    Nokogiri::HTML(response.body).css('center > p a').map { |link| URI.join(uri, link['href'].to_s) }
+    Nokogiri(response.body).css('center > p a').map { |link| URI.join(uri, link['href']).to_s }
   rescue StandardError => e
-    puts "Erro ao obter os links: #{e.message}"
+    puts "Erro fetching links: #{e.message}"
   end
+
+def self.recu
 end

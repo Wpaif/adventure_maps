@@ -3,3 +3,4 @@
 .rubocop.yml
 .rubocop_todo.yml
 .env
+.byebug_history
